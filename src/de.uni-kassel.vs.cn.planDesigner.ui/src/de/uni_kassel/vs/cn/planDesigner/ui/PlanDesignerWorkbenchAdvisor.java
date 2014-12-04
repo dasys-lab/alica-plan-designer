@@ -56,6 +56,7 @@ public class PlanDesignerWorkbenchAdvisor extends WorkbenchAdvisor {
 		    PATH_OBJECT + "prj_obj.gif", true);
 		declareWorkbenchImage(configurer, ideBundle, IDE.SharedImages.IMG_OBJ_PROJECT_CLOSED,
 		    PATH_OBJECT + "cprj_obj.gif", true);
+		
 
 	}
 	

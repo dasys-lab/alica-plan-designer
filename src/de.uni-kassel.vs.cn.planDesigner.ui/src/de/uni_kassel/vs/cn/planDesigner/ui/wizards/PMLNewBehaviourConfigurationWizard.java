@@ -78,7 +78,6 @@ public class PMLNewBehaviourConfigurationWizard extends Wizard implements INewWi
 	
 	private void doFinish(String configurationName, IProgressMonitor monitor) {
 		monitor.beginTask("Creating new Behaviourconfiguration",1);
-		
 		createdConfiguration = AlicaFactory.eINSTANCE.createBehaviourConfiguration();
 		createdConfiguration.setName(configurationName);
 		

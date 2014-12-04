@@ -198,7 +198,14 @@ public class GenerateExpressionValidatorsCommandCPlusPlus extends
 					coc.getPlans().add(plan);
 					cc.getPlans().add(plan);
 					ufc.getPlans().add(plan);
+					
 					for (Transition t : ((Plan) plan).getTransitions()) {
+						if(t.getPreCondition() == null)
+						{
+							MessageDialog dialog = new MessageDialog(Display.getCurrent().getActiveShell(), "Broken Plan, PreCondition is null", null,
+								    "The Plan" + plan.getName() +  " with id " + plan.getId() + "is broken." , MessageDialog.ERROR, new String[] { "OK" }, 0);
+							dialog.open();
+						}
 						coc.getConditions().add(t.getPreCondition());
 						cc.getConditions().add(t.getPreCondition());
 						ufc.getConditions().add(t.getPreCondition());

@@ -14,6 +14,7 @@
 //    GNU Lesser General Public License for more details.
 package de.uni_kassel.vs.cn.planDesigner.ui;
 
+import org.eclipse.core.runtime.IExtension;
 import org.eclipse.jface.action.GroupMarker;
 import org.eclipse.jface.action.IContributionItem;
 import org.eclipse.jface.action.ICoolBarManager;
@@ -28,13 +29,42 @@ import org.eclipse.ui.actions.ActionFactory;
 import org.eclipse.ui.actions.ContributionItemFactory;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
+import org.eclipse.ui.internal.WorkbenchPlugin;
+import org.eclipse.ui.internal.registry.ActionSetRegistry;
+import org.eclipse.ui.internal.registry.IActionSetDescriptor;
 
 public class PlanDesignerActionBarAdvisor extends ActionBarAdvisor {
 	private IContributionItem perspShortList;
 	
+	private static final String[] actionSetId = new String[] { "org.eclipse.ui.WorkingSetActionSet", //$NON-NLS-1$
+	    "org.eclipse.ui.edit.text.actionSet.navigation", //$NON-NLS-1$
+	    "org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo", //$NON-NLS-1$
+	    "org.eclipse.ui.actionSet.openFiles", //$NON-NLS-1$
+	    "org.eclipse.ui.edit.text.actionSet.annotationNavigation", //$NON-NLS-1$
+	    "org.eclipse.ui.NavigateActionSet", //$NON-NLS-1$
+	    "org.eclipse.search.searchActionSet"}; //$NON-NLS-1$
+	
 	public PlanDesignerActionBarAdvisor(IActionBarConfigurer configurer) {
 		super(configurer);
+		removeUnWantedActions();
 	}
+	
+    private void removeUnWantedActions() {
+        ActionSetRegistry asr = WorkbenchPlugin.getDefault().getActionSetRegistry();
+        IActionSetDescriptor[] actionSets = asr.getActionSets();
+
+        IExtension ext = null;
+        for (IActionSetDescriptor actionSet : actionSets) {
+           for (String element : actionSetId) {
+               System.out.println(element);
+
+              if (element.equals(actionSet.getId())) {
+                 ext = actionSet.getConfigurationElement().getDeclaringExtension();
+                 asr.removeExtension(ext, new Object[] { actionSet });
+              }
+           }
+        }
+     }
 	
 	@Override
 	protected void makeActions(IWorkbenchWindow window) {
@@ -109,7 +139,7 @@ public class PlanDesignerActionBarAdvisor extends ActionBarAdvisor {
 		fileTools.add(getAction(ActionFactory.SAVE.getId()));
 		fileTools.add(getAction(ActionFactory.SAVE_ALL.getId()));
 		coolBar.add(fileTools);
-		coolBar.add(new GroupMarker(IWorkbenchActionConstants.MB_ADDITIONS));
+//		coolBar.add(new GroupMarker(IWorkbenchActionConstants.MB_ADDITIONS));
 		
 	}
 	

@@ -112,7 +112,7 @@ public class PMLNewBehaviourConfigurationWizardPage extends WizardPage {
 	public void initialize(){
 		if(this.behPage != null)
 		{
-			configurationNameText.setText(this.behPage.getName() + "Default");
+			configurationNameText.setText(this.behPage.getBehaviourName().replace(".beh", "") + "Default");
 		} else
 		{
 			configurationNameText.setText(this.behaviour.getName() + "Default");

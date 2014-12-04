@@ -16,13 +16,25 @@ package de.uni_kassel.vs.cn.planDesigner.ui;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
+import org.eclipse.e4.ui.model.application.ui.SideValue;
+import org.eclipse.e4.ui.model.application.ui.basic.MTrimBar;
+import org.eclipse.e4.ui.model.application.ui.basic.MTrimElement;
+import org.eclipse.e4.ui.model.application.ui.basic.MTrimmedWindow;
+import org.eclipse.e4.ui.model.application.ui.basic.MWindow;
+import org.eclipse.e4.ui.model.application.ui.menu.MToolControl;
+import org.eclipse.e4.ui.workbench.modeling.EModelService;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
+import org.eclipse.ui.internal.WorkbenchWindow;
 import org.eclipse.ui.internal.dialogs.WorkbenchWizardElement;
 import org.eclipse.ui.internal.wizards.AbstractExtensionWizardRegistry;
 import org.eclipse.ui.wizards.IWizardCategory;
@@ -33,7 +45,27 @@ public class PlanDesignerWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 	public PlanDesignerWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
 		super(configurer);
 	}
+	
+	//destorys the quick acces bar
+	@Override
+	public void openIntro() {
+		IWorkbenchWindow window = PlatformUI.getWorkbench()
+				.getActiveWorkbenchWindow();
+		MWindow model = ((WorkbenchWindow) window).getModel();
+		EModelService modelService = model.getContext()
+				.get(EModelService.class);
+		MTrimBar trimBar = modelService.getTrim((MTrimmedWindow) model,
+				SideValue.TOP);
+		Iterator<MTrimElement> it = trimBar.getChildren().iterator();
+		while (it.hasNext()) {
+			MTrimElement next = it.next();
+			if (next instanceof MToolControl)
+				next.setToBeRendered(false);
 
+		}
+		super.openIntro();
+	}
+	
 	@Override
 	public void preWindowOpen() {
 		IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
@@ -44,15 +76,7 @@ public class PlanDesignerWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		configurer.setShowProgressIndicator(true);
 		configurer.setShowStatusLine(true);
 		configurer.setShowPerspectiveBar(true);
-
-//				IWorkbenchActivitySupport workbenchActivitySupport = PlatformUI.getWorkbench().getActivitySupport();
-//				IActivityManager activityManager = workbenchActivitySupport.getActivityManager();
-//		
-//				Set enabledActivityIds = new HashSet(activityManager.getEnabledActivityIds());
-//				
-//				if (enabledActivityIds.add("de.uni_kassel.vs.cn.planDesigner.ui.textEditorActivity"))
-//				  workbenchActivitySupport.setEnabledActivityIds(enabledActivityIds);
-
+		
 	}
 
 	@Override
