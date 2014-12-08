@@ -7,7 +7,7 @@ if [ $ARCH == "i386" ]; then
        ARCH="x86"
 fi
 #CPATH=`rospack find Planmodeller`"/bin/linux.gtk.${ARCH}/PlanDesigner"
-CPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )""/linux.gtk.${ARCH}/"
+CPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )""/linux.gtk.${ARCH}/PlanDesigner/"
 cd ${CPATH}
 ./PlanDesigner
 
