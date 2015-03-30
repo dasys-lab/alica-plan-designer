@@ -40,7 +40,7 @@ The PlanDesigner is a Eclipse RCP
 
 ![PlanDesigner at first start](docs/PlanDesignerNewPlan.png)
 	
-	If you create a project or just open a exsiting project you can now start to model. In the property tab you will find all attributes of the actual element. You can change for example the name or write a comment. To auto generate the code, **right click -> Code Generation -> Generate all expression validator (generated from the plan included all plans) or Generate expression validator (only generate the code for the plan)**
+If you create a project or just open a exsiting project you can now start to model. In the property tab you will find all attributes of the actual element. You can change for example the name or write a comment. To auto generate the code, **right click -> Code Generation -> Generate all expression validator (generated from the plan included all plans) or Generate expression validator (only generate the code for the plan)**
 	
 
 
