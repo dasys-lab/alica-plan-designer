@@ -14,7 +14,7 @@ The PlanDesigner is a Eclipse RCP
 		* Define roles = here you can define roles for your robots and will be create a roleset
 		* Define Capabillity =  here you can define capabillities for your roles
 
-	3. Outline windows where you can see the whole editor of point 6
+	3. Outline window where you can see the whole editor of point 6
 
 	4. Here will be all created Plans, Plantypes, Behaviours and Tasks 
 
@@ -32,11 +32,24 @@ The PlanDesigner is a Eclipse RCP
 
 	3. *Expressions Validators project* is the path to the folder where all *.cpp* files will be generated.
 
-	4. *Roles project same* the same as point 2 *etc/roles/*
+	4. *Roles project* the same as point 2 *etc/roles/*
 
-	5. *Misc project same* the same as point 2 *etc/Misc/*
+	5. *Misc project* the same as point 2 *etc/Misc/*
 
 **Work with PlanDesigner** 
 
 ![PlanDesigner at first start](docs/PlanDesignerNewPlan.png)
+	
+	If you create a project or just open a exsiting project you can now start to model. In the property tab you will find all attributes of the actual element. You can change for example the name or write a comment. To auto generate the code, **right click -> Code Generation -> Generate all expression validator (generated from the plan included all plans) or Generate expression validator (only generate the code for the plan)**
+	
+
+
+
+
+
+
+
+
+
+
 
