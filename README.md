@@ -1,6 +1,7 @@
 # PlanDesigner for ALICA
 
 **PlanDesigner at the first start**
+
 ![PlanDesigner at first start](docs/PlanDesignerStart.png)
 
 The PlanDesigner is a Eclipse RCP
@@ -22,18 +23,20 @@ The PlanDesigner is a Eclipse RCP
 	6. Editor
 
 **Create Project**
+
 ![PlanDesigner at first start](docs/createProjects.png)
 
-1. The *Root Path* should be the same as the DOMAIN_CONFIG_FOLDER path. It is the path to your *etc/* folder.
+	1. The *Root Path* should be the same as the DOMAIN_CONFIG_FOLDER path. It is the path to your *etc/* folder.
 
-2. *Plans project* is the path to your plan folder. Something like this: *etc/plans/*
+	2. *Plans project* is the path to your plan folder. Something like this: *etc/plans/*
 
-3. *Expressions Validators project* is the path to the folder where all *.cpp* files will be generated.
+	3. *Expressions Validators project* is the path to the folder where all *.cpp* files will be generated.
 
-4. *Roles project same* the same as point 2 *etc/roles/*
+	4. *Roles project same* the same as point 2 *etc/roles/*
 
-5. *Misc project same* the same as point 2 *etc/Misc/*
+	5. *Misc project same* the same as point 2 *etc/Misc/*
 
 **Work with PlanDesigner** 
+
 ![PlanDesigner at first start](docs/PlanDesignerNewPlan.png)
 
