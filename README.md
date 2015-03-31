@@ -39,6 +39,7 @@ The PlanDesigner is a Eclipse RCP
 **Define Capability**
 
 ![Define Capability](docs/CapDevf.png)
+
 Here you can define capabilites and there cap values. (self-explaining) :-)
 
 
@@ -47,6 +48,19 @@ Here you can define capabilites and there cap values. (self-explaining) :-)
 ![Define Roles](docs/DefRoles.png)
 
 This window is dependent to *Define Capability*. You can create new roles and add the defined capabilities with a weight to them. (self-explaining) :-)
+
+**Set the DefaultPlugin**
+
+![Define Roles](docs/plugInDefault.png)
+
+To ensure that the code generation works, you should set the correct plug-in under Window -> Preferences -> Plan Designer -> Conditional Plugins. As in the picture the trails should be set properly.
+
+	* Path to plugin = alica-plan-designer/src/conditionPlugins/plugins
+	* Default plugin should be set to DefaultPlugin
+	* Path to template interface = alica-plan-designer/src/conditionPlugins/templates/TemplateInterface.xpt
+	* Path to plugin template = alica-plan-designer/src/conditionPlugins/templates/PluginTemplate.xpt
+
+
 
 **Work with PlanDesigner** 
 
