@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1433861111833" transient="false" version="3.0">
+<config date="1435321166927" transient="false" version="3.0">
 <site enabled="true" policy="USER-EXCLUDE" updateable="true" url="platform:/base/">
 <feature id="de.uni-kassel.vs.cn.planDesigner.emf.feature" plugin-identifier="de.uni-kassel.vs.cn.planDesigner.ui" url="features/de.uni-kassel.vs.cn.planDesigner.emf.feature_1.0.0.201412041759/" version="1.0.0.201412041759">
 </feature>
