@@ -132,7 +132,7 @@ public class StateImpl extends PlanElementImpl implements State {
 	 */
 	public Plan getInPlan() {
 		if (eContainerFeatureID() != AlicaPackage.STATE__IN_PLAN) return null;
-		return (Plan)eInternalContainer();
+		return (Plan)eContainer();
 	}
 
 	/**
@@ -464,21 +464,6 @@ public class StateImpl extends PlanElementImpl implements State {
 				return entryPoint != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case AlicaPackage.STATE___ENSURE_PARAMETRISATION_CONSISTENCY:
-				ensureParametrisationConsistency();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //StateImpl

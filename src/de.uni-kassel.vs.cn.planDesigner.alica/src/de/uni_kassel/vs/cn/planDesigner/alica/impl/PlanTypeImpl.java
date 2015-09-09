@@ -213,19 +213,4 @@ public class PlanTypeImpl extends AbstractPlanImpl implements PlanType {
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case AlicaPackage.PLAN_TYPE___ENSURE_PARAMETRISATION_CONSISTENCY:
-				ensureParametrisationConsistency();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
 } //PlanTypeImpl

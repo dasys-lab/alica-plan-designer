@@ -60,7 +60,6 @@ public class PlanXYLayoutEditPolicy extends DesignerXYLayoutEditPolicy{
 		Command wrap = UnexecutableCommand.INSTANCE;
 	
 		EditPart hostEditPart = getHost();
-	
 		// We only know how to build children in EObject containers
 		if(hostEditPart.getModel() instanceof EObject){
 			if(!(req.getNewObjectType() instanceof EClass)){

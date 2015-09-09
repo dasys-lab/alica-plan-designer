@@ -159,7 +159,7 @@ public abstract class ConditionImpl extends PlanElementImpl implements Condition
 	 */
 	public AbstractPlan getAbstractPlan() {
 		if (eContainerFeatureID() != AlicaPackage.CONDITION__ABSTRACT_PLAN) return null;
-		return (AbstractPlan)eInternalContainer();
+		return (AbstractPlan)eContainer();
 	}
 
 	/**
@@ -419,21 +419,6 @@ public abstract class ConditionImpl extends PlanElementImpl implements Condition
 				return parameters != null && !parameters.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case AlicaPackage.CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN:
-				ensureVariableConsistency((AbstractPlan)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

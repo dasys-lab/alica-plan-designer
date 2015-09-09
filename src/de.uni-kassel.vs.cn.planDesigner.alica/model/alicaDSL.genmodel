@@ -2,8 +2,7 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.uni-kassel.vs.cn.planDesigner.alica/src" modelPluginID="de.uni-kassel.vs.cn.planDesigner.alica"
     modelName="AlicaDSL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false">
   <foreignModel>alicaDSL.ecore</foreignModel>
   <genPackages prefix="Alica" basePackage="de.uni_kassel.vs.cn.planDesigner" disposableProviderFactory="true"
       ecorePackage="alicaDSL.ecore#/">
@@ -106,6 +105,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//BehaviourConfiguration/frequency"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference alicaDSL.ecore#//BehaviourConfiguration/behaviour"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute alicaDSL.ecore#//BehaviourConfiguration/eventDriven"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//BehaviourConfiguration/postCondition"/>
     </genClasses>
     <genClasses ecoreClass="alicaDSL.ecore#//Role">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference alicaDSL.ecore#//Role/characteristics"/>

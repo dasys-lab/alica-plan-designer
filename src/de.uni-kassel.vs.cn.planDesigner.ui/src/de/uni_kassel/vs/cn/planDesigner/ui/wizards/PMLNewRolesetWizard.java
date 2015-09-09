@@ -100,14 +100,16 @@ public class PMLNewRolesetWizard extends Wizard implements INewWizard {
 		planSelectionPage = new PMLChoosePlanWizardPage();
 		if(!filePage.checkIfRoleDefinitionPathExists())
 		{
-			if(filePage.createRoleDefinitionFile())
+			if(filePage.roleDefinitionFile())
 			{
-				if(filePage.roleDefinitionFile())
-				{
-					addPage(filePage);
-					addPage(planSelectionPage);	
-				}
+				addPage(filePage);
+				addPage(planSelectionPage);	
 			}
+		}
+		else
+		{
+			addPage(filePage);
+			addPage(planSelectionPage);	
 		}
 	}
 	
@@ -186,7 +188,8 @@ public class PMLNewRolesetWizard extends Wizard implements INewWizard {
 					IWorkbenchPage page =
 						PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 					try {
-						IDE.openEditor(page, roleSetFile, true);
+						if(roleSetFile.exists())
+							IDE.openEditor(page, roleSetFile, true);
 					} catch (PartInitException e) {
 					}
 				}

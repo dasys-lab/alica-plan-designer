@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import de.uni_kassel.vs.cn.planDesigner.alica.AlicaPackage;
 import de.uni_kassel.vs.cn.planDesigner.alica.Behaviour;
 import de.uni_kassel.vs.cn.planDesigner.alica.BehaviourConfiguration;
+import de.uni_kassel.vs.cn.planDesigner.alica.PostCondition;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,6 +30,7 @@ import de.uni_kassel.vs.cn.planDesigner.alica.BehaviourConfiguration;
  *   <li>{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.BehaviourConfigurationImpl#getFrequency <em>Frequency</em>}</li>
  *   <li>{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.BehaviourConfigurationImpl#getBehaviour <em>Behaviour</em>}</li>
  *   <li>{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.BehaviourConfigurationImpl#isEventDriven <em>Event Driven</em>}</li>
+ *   <li>{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.BehaviourConfigurationImpl#getPostCondition <em>Post Condition</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,6 +106,16 @@ public class BehaviourConfigurationImpl extends AbstractPlanImpl implements Beha
 	 * @ordered
 	 */
 	protected boolean eventDriven = EVENT_DRIVEN_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPostCondition() <em>Post Condition</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPostCondition()
+	 * @generated
+	 * @ordered
+	 */
+	protected PostCondition postCondition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,7 +197,7 @@ public class BehaviourConfigurationImpl extends AbstractPlanImpl implements Beha
 	 */
 	public Behaviour getBehaviour() {
 		if (eContainerFeatureID() != AlicaPackage.BEHAVIOUR_CONFIGURATION__BEHAVIOUR) return null;
-		return (Behaviour)eInternalContainer();
+		return (Behaviour)eContainer();
 	}
 
 	/**
@@ -245,6 +257,49 @@ public class BehaviourConfigurationImpl extends AbstractPlanImpl implements Beha
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PostCondition getPostCondition() {
+		return postCondition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPostCondition(PostCondition newPostCondition, NotificationChain msgs) {
+		PostCondition oldPostCondition = postCondition;
+		postCondition = newPostCondition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION, oldPostCondition, newPostCondition);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPostCondition(PostCondition newPostCondition) {
+		if (newPostCondition != postCondition) {
+			NotificationChain msgs = null;
+			if (postCondition != null)
+				msgs = ((InternalEObject)postCondition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION, null, msgs);
+			if (newPostCondition != null)
+				msgs = ((InternalEObject)newPostCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION, null, msgs);
+			msgs = basicSetPostCondition(newPostCondition, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION, newPostCondition, newPostCondition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -268,6 +323,8 @@ public class BehaviourConfigurationImpl extends AbstractPlanImpl implements Beha
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 			case AlicaPackage.BEHAVIOUR_CONFIGURATION__BEHAVIOUR:
 				return basicSetBehaviour(null, msgs);
+			case AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION:
+				return basicSetPostCondition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -305,6 +362,8 @@ public class BehaviourConfigurationImpl extends AbstractPlanImpl implements Beha
 				return getBehaviour();
 			case AlicaPackage.BEHAVIOUR_CONFIGURATION__EVENT_DRIVEN:
 				return isEventDriven();
+			case AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION:
+				return getPostCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -331,6 +390,9 @@ public class BehaviourConfigurationImpl extends AbstractPlanImpl implements Beha
 				return;
 			case AlicaPackage.BEHAVIOUR_CONFIGURATION__EVENT_DRIVEN:
 				setEventDriven((Boolean)newValue);
+				return;
+			case AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION:
+				setPostCondition((PostCondition)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -359,6 +421,9 @@ public class BehaviourConfigurationImpl extends AbstractPlanImpl implements Beha
 			case AlicaPackage.BEHAVIOUR_CONFIGURATION__EVENT_DRIVEN:
 				setEventDriven(EVENT_DRIVEN_EDEFAULT);
 				return;
+			case AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION:
+				setPostCondition((PostCondition)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -381,6 +446,8 @@ public class BehaviourConfigurationImpl extends AbstractPlanImpl implements Beha
 				return getBehaviour() != null;
 			case AlicaPackage.BEHAVIOUR_CONFIGURATION__EVENT_DRIVEN:
 				return eventDriven != EVENT_DRIVEN_EDEFAULT;
+			case AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION:
+				return postCondition != null;
 		}
 		return super.eIsSet(featureID);
 	}

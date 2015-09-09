@@ -475,24 +475,6 @@ public class PlanImpl extends AbstractPlanImpl implements Plan {
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case AlicaPackage.PLAN___CALCULATE_CARDINALITIES:
-				calculateCardinalities();
-				return null;
-			case AlicaPackage.PLAN___ENSURE_PARAMETRISATION_CONSISTENCY:
-				ensureParametrisationConsistency();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
