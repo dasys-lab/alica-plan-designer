@@ -74,8 +74,8 @@ qtcreator-build/
 *.epf
 
 # negated patterns (have to below rules, they overright)
-!alica-plan-designer/bin
-alica-plan-designer/bin/linux.gtk.x86_64/workspace
-alica-plan-designer/bin/linux.gtk.x86_64/configuration
-alica-plan-designer/bin/linux.gtk.x86/workspace
-alica-plan-designer/bin/linux.gtk.x86/configuration
+!bin
+bin/linux.gtk.x86_64/workspace
+bin/linux.gtk.x86_64/configuration
+bin/linux.gtk.x86/workspace
+bin/linux.gtk.x86/configuration
