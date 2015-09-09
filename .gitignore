@@ -1,11 +1,9 @@
 
 
 # negated patterns (have to below rules, they overright)
-!bin
-bin/linux.gtk.x86_64/PlanDesigner/workspace
-bin/linux.gtk.x86_64/PlanDesigner/configuration
-bin/linux.gtk.x86/PlanDesigner/workspace
-bin/linux.gtk.x86/PlanDesigner/configuration
-
+bin/linux.gtk.x86_64/PlanDesigner/workspace/**
+bin/linux.gtk.x86_64/PlanDesigner/configuration/**
+bin/linux.gtk.x86/PlanDesigner/workspace/**
+bin/linux.gtk.x86/PlanDesigner/configuration/**
 !bin/linux.gtk.x86_64/PlanDesigner/configuration/config.ini
 !bin/linux.gtk.x86/PlanDesigner/configuration/config.ini
