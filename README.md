@@ -4,12 +4,12 @@
 
 ![PlanDesigner at first start](docs/PlanDesignerStart.png)
 
-The PlanDesigner is a Eclipse RCP
+The PlanDesigner is an Eclipse RCP
 
 	1. Workspace directory where all plans can be find
 
 	2. Create buttons and refresh plugin  
-		* Refresh Plugin 
+		* Refresh Plugin = rereads the folder for conditon plugins
 		* Create Projects = create a new project and update the workspace directory
 		* Define roles = here you can define roles for your robots.
 		* Define Capability =  here you can define capabilities for your roles.
@@ -30,11 +30,11 @@ The PlanDesigner is a Eclipse RCP
 
 	2. *Plans project* is the path to your plan folder. Something like this: *etc/plans/*
 
-	3. *Expressions Validators project* is the path to the folder where all *.cpp* files will be generated.
+	3. *Expressions Validators project* is the path to the folder where all source code will be generated. ./src/*.cpp and ./include/*.h
 
-	4. *Roles project* the same as point 2 *etc/roles/*
+	4. *Roles project* is the path to your roles folder. Somthing like this: *etc/roles/*
 
-	5. *Misc project* the same as point 2 *etc/Misc/*
+	5. *Misc project* is the path to your Task repository. Something like this: *etc/Misc/*
 
 **Define Capability**
 
