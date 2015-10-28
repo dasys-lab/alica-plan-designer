@@ -25,12 +25,12 @@
 							
 								class Constraint«con.id» : public BasicConstraint
 								{
-									void getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan>);
+									void getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp);
 								};
 							«ELSE»
 								class Constraint«con.id» : public BasicConstraint
 								{
-									void getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan>);
+									void getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp);
 								};
 							«ENDIF»
 							«ENDIF»
@@ -39,7 +39,7 @@
 						«IF (con.vars.size > 0) || (con.quantifiers.size > 0)»
 							class Constraint«con.id» : public BasicConstraint
 							{
-								void getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan>);
+								void getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp);
 							};
 						«ENDIF»
 						«ENDIF»
@@ -49,7 +49,7 @@
 					«IF (con.preCondition.vars.size > 0) || (con.preCondition.quantifiers.size > 0)»
 					class Constraint«con.preCondition.id» : public BasicConstraint
 					{
-						void getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan>);
+						void getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp);
 					};
 					«ENDIF»
 					«ENDIF»
