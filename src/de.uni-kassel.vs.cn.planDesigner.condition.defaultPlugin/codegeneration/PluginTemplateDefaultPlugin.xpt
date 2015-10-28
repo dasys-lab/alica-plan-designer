@@ -111,7 +111,6 @@ void Constraint«transition.preCondition.id»::getConstraint(shared_ptr<Constraint
 */
 void Constraint«rc.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+rc.id »
-	//Proteced
 «ENDPROTECT»			    
 }				
 «ENDIF»
