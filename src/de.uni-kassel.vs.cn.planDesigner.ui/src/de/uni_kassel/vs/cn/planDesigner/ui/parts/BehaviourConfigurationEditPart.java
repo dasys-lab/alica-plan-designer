@@ -16,8 +16,12 @@ package de.uni_kassel.vs.cn.planDesigner.ui.parts;
 
 import org.eclipse.draw2d.Label;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.gef.EditPolicy;
 
 import de.uni_kassel.vs.cn.planDesigner.ui.PlanDesignerActivator;
+import de.uni_kassel.vs.cn.planDesigner.ui.policies.DragDropEditPolicy;
+import de.uni_kassel.vs.cn.planDesigner.ui.policies.DragDropWithoutOrphan;
+import de.uni_kassel.vs.cn.planDesigner.ui.policies.PlanXYLayoutEditPolicy;
 import de.uni_kassel.vs.cn.planDesigner.ui.util.PlanDesignerConstants;
 
 public class BehaviourConfigurationEditPart extends AbstractPlanStateEditPart {
@@ -37,5 +41,6 @@ public class BehaviourConfigurationEditPart extends AbstractPlanStateEditPart {
 	protected void handleModelChanged(Notification n) {
 		super.handleModelChanged(n);
 	}
+
 
 }

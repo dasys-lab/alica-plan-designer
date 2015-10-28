@@ -105,24 +105,6 @@ public interface AlicaPackage extends EPackage {
 	int PLAN_ELEMENT_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN_ELEMENT___GENERATE_ID = 0;
-
-	/**
-	 * The number of operations of the '<em>Plan Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN_ELEMENT_OPERATION_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.TransitionImpl <em>Transition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,24 +194,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSITION_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Transition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.ConditionImpl <em>Condition</em>}' class.
@@ -330,33 +294,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONDITION_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Variable Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Condition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PreConditionImpl <em>Pre Condition</em>}' class.
@@ -468,33 +405,6 @@ public interface AlicaPackage extends EPackage {
 	int PRE_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRE_CONDITION___GENERATE_ID = CONDITION___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Variable Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRE_CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN = CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN;
-
-	/**
-	 * The number of operations of the '<em>Pre Condition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRE_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.IInhabitable <em>IInhabitable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -539,24 +449,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int IINHABITABLE_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IINHABITABLE___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>IInhabitable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IINHABITABLE_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.EntryPointImpl <em>Entry Point</em>}' class.
@@ -659,24 +551,6 @@ public interface AlicaPackage extends EPackage {
 	int ENTRY_POINT_FEATURE_COUNT = IINHABITABLE_FEATURE_COUNT + 6;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTRY_POINT___GENERATE_ID = IINHABITABLE___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Entry Point</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTRY_POINT_OPERATION_COUNT = IINHABITABLE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.StateImpl <em>State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -775,33 +649,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATE_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE___ENSURE_PARAMETRISATION_CONSISTENCY = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.TerminalStateImpl <em>Terminal State</em>}' class.
@@ -913,33 +760,6 @@ public interface AlicaPackage extends EPackage {
 	int TERMINAL_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINAL_STATE___GENERATE_ID = STATE___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINAL_STATE___ENSURE_PARAMETRISATION_CONSISTENCY = STATE___ENSURE_PARAMETRISATION_CONSISTENCY;
-
-	/**
-	 * The number of operations of the '<em>Terminal State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINAL_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.SuccessStateImpl <em>Success State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1047,33 +867,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUCCESS_STATE_FEATURE_COUNT = TERMINAL_STATE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUCCESS_STATE___GENERATE_ID = TERMINAL_STATE___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUCCESS_STATE___ENSURE_PARAMETRISATION_CONSISTENCY = TERMINAL_STATE___ENSURE_PARAMETRISATION_CONSISTENCY;
-
-	/**
-	 * The number of operations of the '<em>Success State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUCCESS_STATE_OPERATION_COUNT = TERMINAL_STATE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.FailureStateImpl <em>Failure State</em>}' class.
@@ -1185,33 +978,6 @@ public interface AlicaPackage extends EPackage {
 	int FAILURE_STATE_FEATURE_COUNT = TERMINAL_STATE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAILURE_STATE___GENERATE_ID = TERMINAL_STATE___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAILURE_STATE___ENSURE_PARAMETRISATION_CONSISTENCY = TERMINAL_STATE___ENSURE_PARAMETRISATION_CONSISTENCY;
-
-	/**
-	 * The number of operations of the '<em>Failure State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAILURE_STATE_OPERATION_COUNT = TERMINAL_STATE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.AbstractPlanImpl <em>Abstract Plan</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1321,24 +1087,6 @@ public interface AlicaPackage extends EPackage {
 	int ABSTRACT_PLAN_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_PLAN___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Abstract Plan</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_PLAN_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.BehaviourImpl <em>Behaviour</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1401,24 +1149,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int BEHAVIOUR_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEHAVIOUR___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Behaviour</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEHAVIOUR_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PlanImpl <em>Plan</em>}' class.
@@ -1593,42 +1323,6 @@ public interface AlicaPackage extends EPackage {
 	int PLAN_FEATURE_COUNT = ABSTRACT_PLAN_FEATURE_COUNT + 7;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN___GENERATE_ID = ABSTRACT_PLAN___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Calculate Cardinalities</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN___CALCULATE_CARDINALITIES = ABSTRACT_PLAN_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN___ENSURE_PARAMETRISATION_CONSISTENCY = ABSTRACT_PLAN_OPERATION_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Plan</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN_OPERATION_COUNT = ABSTRACT_PLAN_OPERATION_COUNT + 2;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PlanTypeImpl <em>Plan Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1756,33 +1450,6 @@ public interface AlicaPackage extends EPackage {
 	int PLAN_TYPE_FEATURE_COUNT = ABSTRACT_PLAN_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN_TYPE___GENERATE_ID = ABSTRACT_PLAN___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN_TYPE___ENSURE_PARAMETRISATION_CONSISTENCY = ABSTRACT_PLAN_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Plan Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAN_TYPE_OPERATION_COUNT = ABSTRACT_PLAN_OPERATION_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.RatingImpl <em>Rating</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1827,24 +1494,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int RATING_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RATING___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Rating</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RATING_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PostConditionImpl <em>Post Condition</em>}' class.
@@ -1947,33 +1596,6 @@ public interface AlicaPackage extends EPackage {
 	int POST_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POST_CONDITION___GENERATE_ID = CONDITION___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Variable Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POST_CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN = CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN;
-
-	/**
-	 * The number of operations of the '<em>Post Condition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POST_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.RuntimeConditionImpl <em>Runtime Condition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2074,33 +1696,6 @@ public interface AlicaPackage extends EPackage {
 	int RUNTIME_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNTIME_CONDITION___GENERATE_ID = CONDITION___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Ensure Variable Consistency</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNTIME_CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN = CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN;
-
-	/**
-	 * The number of operations of the '<em>Runtime Condition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNTIME_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.TaskImpl <em>Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2154,24 +1749,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.EStringToEStringMapEntryImpl <em>EString To EString Map Entry</em>}' class.
@@ -2236,24 +1813,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int ESTRING_TO_ESTRING_MAP_ENTRY_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTRING_TO_ESTRING_MAP_ENTRY___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>EString To EString Map Entry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTRING_TO_ESTRING_MAP_ENTRY_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.BehaviourConfigurationImpl <em>Behaviour Configuration</em>}' class.
@@ -2401,31 +1960,22 @@ public interface AlicaPackage extends EPackage {
 	int BEHAVIOUR_CONFIGURATION__EVENT_DRIVEN = ABSTRACT_PLAN_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Post Condition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEHAVIOUR_CONFIGURATION__POST_CONDITION = ABSTRACT_PLAN_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Behaviour Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BEHAVIOUR_CONFIGURATION_FEATURE_COUNT = ABSTRACT_PLAN_FEATURE_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEHAVIOUR_CONFIGURATION___GENERATE_ID = ABSTRACT_PLAN___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Behaviour Configuration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEHAVIOUR_CONFIGURATION_OPERATION_COUNT = ABSTRACT_PLAN_OPERATION_COUNT + 0;
+	int BEHAVIOUR_CONFIGURATION_FEATURE_COUNT = ABSTRACT_PLAN_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.RoleImpl <em>Role</em>}' class.
@@ -2481,24 +2031,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROLE_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Role</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.RoleSetImpl <em>Role Set</em>}' class.
@@ -2574,24 +2106,6 @@ public interface AlicaPackage extends EPackage {
 	int ROLE_SET_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_SET___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Role Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_SET_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.ELongToDoubleMapEntryImpl <em>ELong To Double Map Entry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2656,24 +2170,6 @@ public interface AlicaPackage extends EPackage {
 	int ELONG_TO_DOUBLE_MAP_ENTRY_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELONG_TO_DOUBLE_MAP_ENTRY___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>ELong To Double Map Entry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELONG_TO_DOUBLE_MAP_ENTRY_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.RoleDefinitionSetImpl <em>Role Definition Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2727,24 +2223,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROLE_DEFINITION_SET_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_DEFINITION_SET___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Role Definition Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_DEFINITION_SET_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.RoleTaskMappingImpl <em>Role Task Mapping</em>}' class.
@@ -2809,24 +2287,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROLE_TASK_MAPPING_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_TASK_MAPPING___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Role Task Mapping</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_TASK_MAPPING_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.CharacteristicImpl <em>Characteristic</em>}' class.
@@ -2902,24 +2362,6 @@ public interface AlicaPackage extends EPackage {
 	int CHARACTERISTIC_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHARACTERISTIC___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Characteristic</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHARACTERISTIC_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.TaskGraphImpl <em>Task Graph</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2955,15 +2397,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_GRAPH_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Task Graph</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_GRAPH_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.EdgeImpl <em>Edge</em>}' class.
@@ -3003,15 +2436,6 @@ public interface AlicaPackage extends EPackage {
 	int EDGE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Edge</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDGE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3047,15 +2471,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int NODE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.TaskWrapperImpl <em>Task Wrapper</em>}' class.
@@ -3113,15 +2528,6 @@ public interface AlicaPackage extends EPackage {
 	int TASK_WRAPPER_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Task Wrapper</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_WRAPPER_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.InternalRoleTaskMappingImpl <em>Internal Role Task Mapping</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3157,15 +2563,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTERNAL_ROLE_TASK_MAPPING_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Internal Role Task Mapping</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERNAL_ROLE_TASK_MAPPING_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.TaskRepositoryImpl <em>Task Repository</em>}' class.
@@ -3230,33 +2627,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_REPOSITORY_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_REPOSITORY___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The operation id for the '<em>Create Default Task</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_REPOSITORY___CREATE_DEFAULT_TASK = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Task Repository</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_REPOSITORY_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.SynchronisationImpl <em>Synchronisation</em>}' class.
@@ -3341,24 +2711,6 @@ public interface AlicaPackage extends EPackage {
 	int SYNCHRONISATION_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNCHRONISATION___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Synchronisation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYNCHRONISATION_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.VariableImpl <em>Variable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3412,24 +2764,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int VARIABLE_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.ParametrisationImpl <em>Parametrisation</em>}' class.
@@ -3505,24 +2839,6 @@ public interface AlicaPackage extends EPackage {
 	int PARAMETRISATION_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRISATION___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Parametrisation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRISATION_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.AnnotatedPlanImpl <em>Annotated Plan</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3585,24 +2901,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int ANNOTATED_PLAN_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANNOTATED_PLAN___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Annotated Plan</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANNOTATED_PLAN_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.QuantifierImpl <em>Quantifier</em>}' class.
@@ -3669,24 +2967,6 @@ public interface AlicaPackage extends EPackage {
 	int QUANTIFIER_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTIFIER___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Quantifier</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTIFIER_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.ForallAgentsImpl <em>Forall Agents</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3751,24 +3031,6 @@ public interface AlicaPackage extends EPackage {
 	int FORALL_AGENTS_FEATURE_COUNT = QUANTIFIER_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORALL_AGENTS___GENERATE_ID = QUANTIFIER___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Forall Agents</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORALL_AGENTS_OPERATION_COUNT = QUANTIFIER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.CapabilityImpl <em>Capability</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3824,24 +3086,6 @@ public interface AlicaPackage extends EPackage {
 	int CAPABILITY_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Capability</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.CapValueImpl <em>Cap Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3886,24 +3130,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAP_VALUE_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAP_VALUE___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Cap Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAP_VALUE_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.CapabilityDefinitionSetImpl <em>Capability Definition Set</em>}' class.
@@ -3959,24 +3185,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAPABILITY_DEFINITION_SET_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DEFINITION_SET___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Capability Definition Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DEFINITION_SET_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PlanningProblemImpl <em>Planning Problem</em>}' class.
@@ -4169,24 +3377,6 @@ public interface AlicaPackage extends EPackage {
 	int PLANNING_PROBLEM_FEATURE_COUNT = ABSTRACT_PLAN_FEATURE_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANNING_PROBLEM___GENERATE_ID = ABSTRACT_PLAN___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>Planning Problem</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANNING_PROBLEM_OPERATION_COUNT = ABSTRACT_PLAN_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PlannerImpl <em>Planner</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4242,15 +3432,6 @@ public interface AlicaPackage extends EPackage {
 	int PLANNER_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Planner</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANNER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.FluentImpl <em>Fluent</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4286,15 +3467,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int FLUENT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Fluent</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLUENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.DomainDescriptionImpl <em>Domain Description</em>}' class.
@@ -4352,15 +3524,6 @@ public interface AlicaPackage extends EPackage {
 	int DOMAIN_DESCRIPTION_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Domain Description</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_DESCRIPTION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PlannersImpl <em>Planners</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4396,15 +3559,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANNERS_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Planners</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANNERS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.EStringToEObjectMapEntryImpl <em>EString To EObject Map Entry</em>}' class.
@@ -4471,24 +3625,6 @@ public interface AlicaPackage extends EPackage {
 	int ESTRING_TO_EOBJECT_MAP_ENTRY_FEATURE_COUNT = PLAN_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Generate ID</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTRING_TO_EOBJECT_MAP_ENTRY___GENERATE_ID = PLAN_ELEMENT___GENERATE_ID;
-
-	/**
-	 * The number of operations of the '<em>EString To EObject Map Entry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTRING_TO_EOBJECT_MAP_ENTRY_OPERATION_COUNT = PLAN_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.FluentParametersImpl <em>Fluent Parameters</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4524,15 +3660,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int FLUENT_PARAMETERS_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Fluent Parameters</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLUENT_PARAMETERS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.ConstantImpl <em>Constant</em>}' class.
@@ -4572,15 +3699,6 @@ public interface AlicaPackage extends EPackage {
 	int CONSTANT_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Constant</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.BehaviourCreatorImpl <em>Behaviour Creator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4607,15 +3725,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int BEHAVIOUR_CREATOR_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Behaviour Creator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEHAVIOUR_CREATOR_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.ConditionCreatorImpl <em>Condition Creator</em>}' class.
@@ -4655,15 +3764,6 @@ public interface AlicaPackage extends EPackage {
 	int CONDITION_CREATOR_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Condition Creator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION_CREATOR_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.UtilityFunctionCreatorImpl <em>Utility Function Creator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4699,15 +3799,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int UTILITY_FUNCTION_CREATOR_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Utility Function Creator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UTILITY_FUNCTION_CREATOR_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.ConstraintCreatorImpl <em>Constraint Creator</em>}' class.
@@ -4747,15 +3838,6 @@ public interface AlicaPackage extends EPackage {
 	int CONSTRAINT_CREATOR_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Constraint Creator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_CREATOR_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.DomainBehaviourImpl <em>Domain Behaviour</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4775,15 +3857,6 @@ public interface AlicaPackage extends EPackage {
 	int DOMAIN_BEHAVIOUR_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Domain Behaviour</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_BEHAVIOUR_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.DomainConditionImpl <em>Domain Condition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4801,15 +3874,6 @@ public interface AlicaPackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_CONDITION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Domain Condition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_CONDITION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.PlanningType <em>Planning Type</em>}' enum.
@@ -4961,16 +4025,6 @@ public interface AlicaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCondition_Parameters();
-
-	/**
-	 * Returns the meta object for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.Condition#ensureVariableConsistency(de.uni_kassel.vs.cn.planDesigner.alica.AbstractPlan) <em>Ensure Variable Consistency</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Ensure Variable Consistency</em>' operation.
-	 * @see de.uni_kassel.vs.cn.planDesigner.alica.Condition#ensureVariableConsistency(de.uni_kassel.vs.cn.planDesigner.alica.AbstractPlan)
-	 * @generated
-	 */
-	EOperation getCondition__EnsureVariableConsistency__AbstractPlan();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_kassel.vs.cn.planDesigner.alica.PreCondition <em>Pre Condition</em>}'.
@@ -5306,16 +4360,6 @@ public interface AlicaPackage extends EPackage {
 	EReference getState_EntryPoint();
 
 	/**
-	 * Returns the meta object for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.State#ensureParametrisationConsistency() <em>Ensure Parametrisation Consistency</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * @see de.uni_kassel.vs.cn.planDesigner.alica.State#ensureParametrisationConsistency()
-	 * @generated
-	 */
-	EOperation getState__EnsureParametrisationConsistency();
-
-	/**
 	 * Returns the meta object for class '{@link de.uni_kassel.vs.cn.planDesigner.alica.Plan <em>Plan</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5403,26 +4447,6 @@ public interface AlicaPackage extends EPackage {
 	EReference getPlan_EntryPoints();
 
 	/**
-	 * Returns the meta object for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.Plan#calculateCardinalities() <em>Calculate Cardinalities</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Calculate Cardinalities</em>' operation.
-	 * @see de.uni_kassel.vs.cn.planDesigner.alica.Plan#calculateCardinalities()
-	 * @generated
-	 */
-	EOperation getPlan__CalculateCardinalities();
-
-	/**
-	 * Returns the meta object for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.Plan#ensureParametrisationConsistency() <em>Ensure Parametrisation Consistency</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * @see de.uni_kassel.vs.cn.planDesigner.alica.Plan#ensureParametrisationConsistency()
-	 * @generated
-	 */
-	EOperation getPlan__EnsureParametrisationConsistency();
-
-	/**
 	 * Returns the meta object for class '{@link de.uni_kassel.vs.cn.planDesigner.alica.PlanType <em>Plan Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5453,16 +4477,6 @@ public interface AlicaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPlanType_Plans();
-
-	/**
-	 * Returns the meta object for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.PlanType#ensureParametrisationConsistency() <em>Ensure Parametrisation Consistency</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Ensure Parametrisation Consistency</em>' operation.
-	 * @see de.uni_kassel.vs.cn.planDesigner.alica.PlanType#ensureParametrisationConsistency()
-	 * @generated
-	 */
-	EOperation getPlanType__EnsureParametrisationConsistency();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_kassel.vs.cn.planDesigner.alica.Rating <em>Rating</em>}'.
@@ -5536,16 +4550,6 @@ public interface AlicaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPlanElement_Comment();
-
-	/**
-	 * Returns the meta object for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.PlanElement#generateID() <em>Generate ID</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate ID</em>' operation.
-	 * @see de.uni_kassel.vs.cn.planDesigner.alica.PlanElement#generateID()
-	 * @generated
-	 */
-	EOperation getPlanElement__GenerateID();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_kassel.vs.cn.planDesigner.alica.Task <em>Task</em>}'.
@@ -5666,6 +4670,17 @@ public interface AlicaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBehaviourConfiguration_EventDriven();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.uni_kassel.vs.cn.planDesigner.alica.BehaviourConfiguration#getPostCondition <em>Post Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Post Condition</em>'.
+	 * @see de.uni_kassel.vs.cn.planDesigner.alica.BehaviourConfiguration#getPostCondition()
+	 * @see #getBehaviourConfiguration()
+	 * @generated
+	 */
+	EReference getBehaviourConfiguration_PostCondition();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_kassel.vs.cn.planDesigner.alica.Role <em>Role</em>}'.
@@ -6052,16 +5067,6 @@ public interface AlicaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTaskRepository_DefaultTask();
-
-	/**
-	 * Returns the meta object for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.TaskRepository#createDefaultTask() <em>Create Default Task</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Default Task</em>' operation.
-	 * @see de.uni_kassel.vs.cn.planDesigner.alica.TaskRepository#createDefaultTask()
-	 * @generated
-	 */
-	EOperation getTaskRepository__CreateDefaultTask();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_kassel.vs.cn.planDesigner.alica.Synchronisation <em>Synchronisation</em>}'.
@@ -6975,14 +5980,6 @@ public interface AlicaPackage extends EPackage {
 		EReference CONDITION__PARAMETERS = eINSTANCE.getCondition_Parameters();
 
 		/**
-		 * The meta object literal for the '<em><b>Ensure Variable Consistency</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONDITION___ENSURE_VARIABLE_CONSISTENCY__ABSTRACTPLAN = eINSTANCE.getCondition__EnsureVariableConsistency__AbstractPlan();
-
-		/**
 		 * The meta object literal for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PreConditionImpl <em>Pre Condition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7247,14 +6244,6 @@ public interface AlicaPackage extends EPackage {
 		EReference STATE__ENTRY_POINT = eINSTANCE.getState_EntryPoint();
 
 		/**
-		 * The meta object literal for the '<em><b>Ensure Parametrisation Consistency</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STATE___ENSURE_PARAMETRISATION_CONSISTENCY = eINSTANCE.getState__EnsureParametrisationConsistency();
-
-		/**
 		 * The meta object literal for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PlanImpl <em>Plan</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7321,22 +6310,6 @@ public interface AlicaPackage extends EPackage {
 		EReference PLAN__ENTRY_POINTS = eINSTANCE.getPlan_EntryPoints();
 
 		/**
-		 * The meta object literal for the '<em><b>Calculate Cardinalities</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PLAN___CALCULATE_CARDINALITIES = eINSTANCE.getPlan__CalculateCardinalities();
-
-		/**
-		 * The meta object literal for the '<em><b>Ensure Parametrisation Consistency</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PLAN___ENSURE_PARAMETRISATION_CONSISTENCY = eINSTANCE.getPlan__EnsureParametrisationConsistency();
-
-		/**
 		 * The meta object literal for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.PlanTypeImpl <em>Plan Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7361,14 +6334,6 @@ public interface AlicaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PLAN_TYPE__PLANS = eINSTANCE.getPlanType_Plans();
-
-		/**
-		 * The meta object literal for the '<em><b>Ensure Parametrisation Consistency</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PLAN_TYPE___ENSURE_PARAMETRISATION_CONSISTENCY = eINSTANCE.getPlanType__EnsureParametrisationConsistency();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.RatingImpl <em>Rating</em>}' class.
@@ -7433,14 +6398,6 @@ public interface AlicaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PLAN_ELEMENT__COMMENT = eINSTANCE.getPlanElement_Comment();
-
-		/**
-		 * The meta object literal for the '<em><b>Generate ID</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PLAN_ELEMENT___GENERATE_ID = eINSTANCE.getPlanElement__GenerateID();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.TaskImpl <em>Task</em>}' class.
@@ -7535,6 +6492,14 @@ public interface AlicaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BEHAVIOUR_CONFIGURATION__EVENT_DRIVEN = eINSTANCE.getBehaviourConfiguration_EventDriven();
+
+		/**
+		 * The meta object literal for the '<em><b>Post Condition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BEHAVIOUR_CONFIGURATION__POST_CONDITION = eINSTANCE.getBehaviourConfiguration_PostCondition();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.RoleImpl <em>Role</em>}' class.
@@ -7847,14 +6812,6 @@ public interface AlicaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TASK_REPOSITORY__DEFAULT_TASK = eINSTANCE.getTaskRepository_DefaultTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Create Default Task</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TASK_REPOSITORY___CREATE_DEFAULT_TASK = eINSTANCE.getTaskRepository__CreateDefaultTask();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_kassel.vs.cn.planDesigner.alica.impl.SynchronisationImpl <em>Synchronisation</em>}' class.

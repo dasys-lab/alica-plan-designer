@@ -199,7 +199,6 @@ public class DragDropWithoutOrphan extends GraphicalEditPolicy  {
 		Command cmd = UnexecutableCommand.INSTANCE;
 		
 		final EObject newChild = (EObject)req.getNewObject();
-		
 		// We only know how to build children in EObject containers
 		if(getHost().getModel() instanceof EObject){
 			final EObject parent = (EObject)getHost().getModel();

@@ -220,18 +220,4 @@ public class TaskRepositoryImpl extends PlanElementImpl implements TaskRepositor
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case AlicaPackage.TASK_REPOSITORY___CREATE_DEFAULT_TASK:
-				return createDefaultTask();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
 } //TaskRepositoryImpl

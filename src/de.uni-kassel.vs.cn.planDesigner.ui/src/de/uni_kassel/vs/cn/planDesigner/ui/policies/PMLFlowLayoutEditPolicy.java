@@ -31,6 +31,7 @@ import org.eclipse.gef.requests.CreateRequest;
 
 import de.uni_kassel.vs.cn.planDesigner.alica.AbstractPlan;
 import de.uni_kassel.vs.cn.planDesigner.alica.AlicaPackage;
+import de.uni_kassel.vs.cn.planDesigner.alica.BehaviourConfiguration;
 import de.uni_kassel.vs.cn.planDesigner.alica.PostCondition;
 import de.uni_kassel.vs.cn.planDesigner.ui.adapter.IModelExclusionAdapter;
 import de.uni_kassel.vs.cn.planDesigner.ui.commands.CommandWrap4EMF;
@@ -99,17 +100,26 @@ public class PMLFlowLayoutEditPolicy extends FlowLayoutEditPolicy {
 	}
 	
 	private Command getAddChildCommand(CreateRequest req){
-		// TODO: Remove this - only for debugging purposes. This should not be happen!
-//		if(req.getNewObject() == null){
-//			System.err.println("Creation Factory doesn't return a new Object!");
-//			return null;
-//		}
 		Command cmd = UnexecutableCommand.INSTANCE;
 		EObject newChild = (EObject)req.getNewObject();
-	
 		// We only know how to build children in EObject containers
 		if(getHost().getModel() instanceof EObject){
 			EObject parent = (EObject)getHost().getModel();
+			
+			
+			PMLTransactionalEditingDomain editingDomain1 =  (PMLTransactionalEditingDomain)TransactionUtil.getEditingDomain(parent);
+			if(parent instanceof BehaviourConfiguration)
+			{
+				if (newChild instanceof PostCondition) {
+					cmd = new CommandWrap4EMF(CreateChildCommand.create(
+							editingDomain1, 
+							parent, 
+							new CommandParameter(parent,AlicaPackage.eINSTANCE.getBehaviourConfiguration_PostCondition(),newChild), 
+							Collections.emptyList()));
+				}
+				return cmd;
+			}
+			
 			
 			IModelExclusionAdapter exclusionAdapter = (IModelExclusionAdapter)getHost().getAdapter(IModelExclusionAdapter.class);
 			Set<String> exclusionSet = null;

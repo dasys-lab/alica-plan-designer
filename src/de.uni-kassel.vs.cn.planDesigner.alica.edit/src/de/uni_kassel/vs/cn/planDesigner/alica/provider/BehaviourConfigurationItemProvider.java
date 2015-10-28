@@ -160,6 +160,7 @@ public class BehaviourConfigurationItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(AlicaPackage.Literals.BEHAVIOUR_CONFIGURATION__PARAMETERS);
+			childrenFeatures.add(AlicaPackage.Literals.BEHAVIOUR_CONFIGURATION__POST_CONDITION);
 		}
 		return childrenFeatures;
 	}
@@ -220,6 +221,7 @@ public class BehaviourConfigurationItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case AlicaPackage.BEHAVIOUR_CONFIGURATION__PARAMETERS:
+			case AlicaPackage.BEHAVIOUR_CONFIGURATION__POST_CONDITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -241,6 +243,34 @@ public class BehaviourConfigurationItemProvider
 			(createChildParameter
 				(AlicaPackage.Literals.BEHAVIOUR_CONFIGURATION__PARAMETERS,
 				 AlicaFactory.eINSTANCE.create(AlicaPackage.Literals.ESTRING_TO_ESTRING_MAP_ENTRY)));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AlicaPackage.Literals.BEHAVIOUR_CONFIGURATION__POST_CONDITION,
+				 AlicaFactory.eINSTANCE.createPostCondition()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == AlicaPackage.Literals.ABSTRACT_PLAN__CONDITIONS ||
+			childFeature == AlicaPackage.Literals.BEHAVIOUR_CONFIGURATION__POST_CONDITION;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

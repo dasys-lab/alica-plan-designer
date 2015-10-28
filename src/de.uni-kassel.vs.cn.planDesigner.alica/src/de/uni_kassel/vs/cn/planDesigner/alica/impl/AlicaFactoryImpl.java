@@ -62,7 +62,7 @@ public class AlicaFactoryImpl extends EFactoryImpl implements AlicaFactory {
 	 */
 	public static AlicaFactory init() {
 		try {
-			AlicaFactory theAlicaFactory = (AlicaFactory)EPackage.Registry.INSTANCE.getEFactory(AlicaPackage.eNS_URI);
+			AlicaFactory theAlicaFactory = (AlicaFactory)EPackage.Registry.INSTANCE.getEFactory("http:///de.uni_kassel.vs.cn"); 
 			if (theAlicaFactory != null) {
 				return theAlicaFactory;
 			}

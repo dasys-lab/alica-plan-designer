@@ -301,7 +301,7 @@ public class EntryPointImpl extends PlanElementImpl implements EntryPoint {
 	 */
 	public Plan getPlan() {
 		if (eContainerFeatureID() != AlicaPackage.ENTRY_POINT__PLAN) return null;
-		return (Plan)eInternalContainer();
+		return (Plan)eContainer();
 	}
 
 	/**

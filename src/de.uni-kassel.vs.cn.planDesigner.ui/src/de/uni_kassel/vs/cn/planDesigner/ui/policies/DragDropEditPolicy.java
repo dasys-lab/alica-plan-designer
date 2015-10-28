@@ -128,6 +128,7 @@ public class DragDropEditPolicy extends GraphicalEditPolicy  {
 	protected Command getDropCommand(CreateRequest req){
 		Command cmd = UnexecutableCommand.INSTANCE;
 		// Check what the user wants to build
+		System.out.println("11111");
 		if(req.getNewObjectType().equals(AlicaPackage.eINSTANCE.getBehaviour())){
 			// We have to assist the user in creating a new BehaviourConfiguration
 			final Behaviour behaviour = (Behaviour)req.getNewObject();
@@ -202,13 +203,12 @@ public class DragDropEditPolicy extends GraphicalEditPolicy  {
 	 */
 	protected Command getCreateDropCommand(CreateRequest req){
 		// Copied from PMLFlowLayoutEditPolicy...
-		System.out.println("HIER2");
 		// TODO: Remove this - only for debugging purposis. This should not be happen!
 //		if(req.getNewObject() == null){
 //			System.err.println("Creation Factory doesn't return a new Object!");
 //			return null;
 //		}
-		
+		System.out.println("2222222");
 		Command cmd = UnexecutableCommand.INSTANCE;
 		
 		final EObject newChild = (EObject)req.getNewObject();

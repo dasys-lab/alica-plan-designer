@@ -513,17 +513,6 @@
          </commonFilter>
          <commonFilter
                activeByDefault="true"
-               id="de.uni_kassel.vs.cn.planDesigner.ui.rdefsetFilter"
-               name="*.rdefset Files (Role Definition Files)">
-            <filterExpression>
-               <test
-                     property="org.eclipse.core.resources.name"
-                     value="*.rdefset">
-               </test>
-            </filterExpression>
-         </commonFilter>
-         <commonFilter
-               activeByDefault="true"
                id="de.uni_kassel.vs.cn.planDesigner.ui.graphFilter"
                name="*.graph Files (TaskGraph)">
             <filterExpression>
