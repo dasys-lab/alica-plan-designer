@@ -88,7 +88,7 @@
 * Plans in State: «FOREACH s.plans AS plan»				
 * - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
 */
-public static void GetConstraint«transition.preCondition.id»(ConstraintDescriptor c, RunningPlan rp) {
+public static void GetConstraint«transition.preCondition.id»(ProblemDescriptor c, RunningPlan rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+transition.id »
 	//WorldModel wm = WorldModel.Get();
 «ENDPROTECT»			
@@ -107,7 +107,7 @@ public static void GetConstraint«transition.preCondition.id»(ConstraintDescripto
 * (Formula:) «FOREACH rc.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
 *		«parameter.value»«ENDIF»«ENDFOREACH»
 */
-public static void GetConstraint«rc.id»(ConstraintDescriptor c, RunningPlan rp) {
+public static void GetConstraint«rc.id»(ProblemDescriptor c, RunningPlan rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+rc.id »
 	//WorldModel wm = WorldModel.Get();	
 «ENDPROTECT»			    
@@ -121,7 +121,7 @@ public static void GetConstraint«rc.id»(ConstraintDescriptor c, RunningPlan rp) 
 * (Formula:) «FOREACH pc.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
 *		«parameter.value»«ENDIF»«ENDFOREACH»
 */
-public static void GetConstraint«pc.id»(ConstraintDescriptor c, RunningPlan rp) {
+public static void GetConstraint«pc.id»(ProblemDescriptor c, RunningPlan rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+pc.id »
 	//WorldModel wm = WorldModel.Get();	
 «ENDPROTECT»			    

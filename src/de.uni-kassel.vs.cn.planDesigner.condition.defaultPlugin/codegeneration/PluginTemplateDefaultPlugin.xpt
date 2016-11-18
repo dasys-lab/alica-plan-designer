@@ -85,7 +85,7 @@
 * forall agents in «q.scope.name» let v = «q.sorts» 
 «ENDFOREACH»
 */
-void Constraint«transition.preCondition.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp) {
+void Constraint«transition.preCondition.id»::getConstraint(shared_ptr<ProblemDescriptor> c, shared_ptr<RunningPlan> rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+transition.preCondition.id »
 	//Proteced
 «ENDPROTECT»			
@@ -109,7 +109,7 @@ void Constraint«transition.preCondition.id»::getConstraint(shared_ptr<Constraint
 * forall agents in «q.scope.name» let v = «q.sorts» 
 «ENDFOREACH»
 */
-void Constraint«rc.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp) {
+void Constraint«rc.id»::getConstraint(shared_ptr<ProblemDescriptor> c, shared_ptr<RunningPlan> rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+rc.id »
 «ENDPROTECT»			    
 }				
@@ -128,7 +128,7 @@ void Constraint«rc.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared
 * forall agents in «q.scope.name» let v = «q.sorts» 
 «ENDFOREACH»
 */
-void Constraint«pc.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp) {
+void Constraint«pc.id»::getConstraint(shared_ptr<ProblemDescriptor> c, shared_ptr<RunningPlan> rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+pc.id »
 	//Proteced
 «ENDPROTECT»	

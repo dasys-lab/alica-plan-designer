@@ -3,35 +3,6 @@
 
 
 «FOREACH s.outTransitions AS transition»
-«IF (transition.preCondition.pluginName == "DefaultPlugin")»
-			/*
-			*		
-			* Transition:
-			*   - Name: «transition.preCondition.name», ConditionString: «transition.preCondition.conditionString», Comment : «transition.comment» 
-			*
-			* Plans in State: «FOREACH s.plans AS plan»				
-			*   - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
-			*
-			* Tasks: «FOREACH s.inPlan.entryPoints AS planEntryPoint»
-			*   - «planEntryPoint.task.name» («planEntryPoint.task.id») (Entrypoint: «planEntryPoint.id»)«ENDFOREACH»
-			*
-			* States:«FOREACH s.inPlan.states AS state»
-			*   - «state.name» («state.id»)«ENDFOREACH»
-			*
-			* Vars:«FOREACH transition.preCondition.vars AS var»				
-			*	- «var.name» («var.id») «ENDFOREACH»
-			*/
-			bool TransitionCondition«transition.preCondition.id»::evaluate(shared_ptr<RunningPlan> rp)
-			 {	
-				«PROTECT CSTART '/*' CEND '*/' ID transition.id »
-					return false;
-				«ENDPROTECT»	
-				
-			}
-«ENDIF»
-	«ENDFOREACH»
-
-«FOREACH s.outTransitions AS transition»
 «IF (transition.preCondition.pluginName == "PropositionalLogicPlugin")»
 		/*
 			*		
@@ -63,43 +34,38 @@
 «ENDIF»	
 «ENDFOREACH»
 
+«FOREACH s.outTransitions AS transition»
+«IF (transition.preCondition.pluginName == "DefaultPlugin")»
+			/*
+			*		
+			* Transition:
+			*   - Name: «transition.preCondition.name», ConditionString: «transition.preCondition.conditionString», Comment : «transition.comment» 
+			*
+			* Plans in State: «FOREACH s.plans AS plan»				
+			*   - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
+			*
+			* Tasks: «FOREACH s.inPlan.entryPoints AS planEntryPoint»
+			*   - «planEntryPoint.task.name» («planEntryPoint.task.id») (Entrypoint: «planEntryPoint.id»)«ENDFOREACH»
+			*
+			* States:«FOREACH s.inPlan.states AS state»
+			*   - «state.name» («state.id»)«ENDFOREACH»
+			*
+			* Vars:«FOREACH transition.preCondition.vars AS var»				
+			*	- «var.name» («var.id») «ENDFOREACH»
+			*/
+			bool TransitionCondition«transition.preCondition.id»::evaluate(shared_ptr<RunningPlan> rp)
+			 {	
+				«PROTECT CSTART '/*' CEND '*/' ID transition.id »
+					return false;
+				«ENDPROTECT»	
+				
+			}
+«ENDIF»
+	«ENDFOREACH»
+
 «ENDAROUND»
 «AROUND de::uni_kassel::vs::cn::planDesigner::codegeneration::templates::ExpressionsCPlusPlus::planCheckingMethods FOR AbstractPlan»
 
-
-«FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
-	«IF (rc.pluginName == "DefaultPlugin")»
-			  //Check of RuntimeCondition - (Name): «rc.name», (ConditionString): «rc.conditionString», (Comment) : «rc.comment» 
-
-			  /* 
-			  * Available Vars:«FOREACH rc.vars AS var»
-			  *	- «var.name» («var.id»)«ENDFOREACH»
-			  */
-			 bool RunTimeCondition«rc.id»::evaluate(shared_ptr<RunningPlan> rp)
-			 {
-			 	 «PROTECT CSTART '/*' CEND '*/' ID rc.id »
-			 	  return true;
-				 «ENDPROTECT»			    
-			  }		
-	«ENDIF»		
-	«ENDFOREACH»
-	«FOREACH this.conditions.typeSelect(PreCondition) AS pc»
-	«IF (pc.pluginName == "DefaultPlugin")»
-			  //Check of PreCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» , (Comment) : «pc.comment» 
-
-			  /*
-			  * Available Vars:«FOREACH pc.vars AS var»
-			  *	- «var.name» («var.id»)«ENDFOREACH»
-			  */
-			 bool PreCondition«pc.id»::evaluate(shared_ptr<RunningPlan> rp)
-			{
-			 	 «PROTECT CSTART '/*' CEND '*/' ID pc.id »
-			 	 	//--> "PreCondition:«pc.id»  not implemented";
-					return true;
-				 «ENDPROTECT»			    
-			  }
-	«ENDIF»				
-	«ENDFOREACH»
 
 «FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
 	«IF (rc.pluginName ==  "PropositionalLogicPlugin")»
@@ -140,9 +106,65 @@
 	«ENDIF»				
 	«ENDFOREACH»
 
+«FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
+	«IF (rc.pluginName == "DefaultPlugin")»
+			  //Check of RuntimeCondition - (Name): «rc.name», (ConditionString): «rc.conditionString», (Comment) : «rc.comment» 
+
+			  /* 
+			  * Available Vars:«FOREACH rc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			 bool RunTimeCondition«rc.id»::evaluate(shared_ptr<RunningPlan> rp)
+			 {
+			 	 «PROTECT CSTART '/*' CEND '*/' ID rc.id »
+			 	  return true;
+				 «ENDPROTECT»			    
+			  }		
+	«ENDIF»		
+	«ENDFOREACH»
+	«FOREACH this.conditions.typeSelect(PreCondition) AS pc»
+	«IF (pc.pluginName == "DefaultPlugin")»
+			  //Check of PreCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» , (Comment) : «pc.comment» 
+
+			  /*
+			  * Available Vars:«FOREACH pc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			 bool PreCondition«pc.id»::evaluate(shared_ptr<RunningPlan> rp)
+			{
+			 	 «PROTECT CSTART '/*' CEND '*/' ID pc.id »
+			 	 	//--> "PreCondition:«pc.id»  not implemented";
+					return true;
+				 «ENDPROTECT»			    
+			  }
+	«ENDIF»				
+	«ENDFOREACH»
+
 «ENDAROUND»
 «AROUND de::uni_kassel::vs::cn::planDesigner::codegeneration::templates::ConstraintsCPlusPlus::stateCheckingMethods(State s) FOR Plan»
 
+
+// State: «s.name»
+«FOREACH s.outTransitions AS transition»
+«IF (transition.preCondition.pluginName == "PropositionalLogicPlugin")»
+«IF transition.preCondition.id > 0»
+/*		
+* Transition: 
+* - Name: «transition.name»
+* - Formula: «FOREACH transition.preCondition.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
+*		«parameter.value»«ENDIF»«ENDFOREACH»
+*
+* Plans in State: «FOREACH s.plans AS plan»				
+* - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
+*/
+public static void GetConstraint«transition.preCondition.id»(ProblemDescriptor c, RunningPlan rp) {
+«PROTECT CSTART '/*' CEND '*/' ID "cc"+transition.id »
+	//WorldModel wm = WorldModel.Get();
+«ENDPROTECT»			
+}
+«ENDIF»
+«ENDIF»
+«ENDFOREACH»
 
 // State: «s.name»
 «FOREACH s.outTransitions AS transition»
@@ -162,7 +184,7 @@
 * forall agents in «q.scope.name» let v = «q.sorts» 
 «ENDFOREACH»
 */
-void Constraint«transition.preCondition.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp) {
+void Constraint«transition.preCondition.id»::getConstraint(shared_ptr<ProblemDescriptor> c, shared_ptr<RunningPlan> rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+transition.preCondition.id »
 	//Proteced
 «ENDPROTECT»			
@@ -172,31 +194,39 @@ void Constraint«transition.preCondition.id»::getConstraint(shared_ptr<Constraint
 «ENDIF»
 «ENDFOREACH»
 
-// State: «s.name»
-«FOREACH s.outTransitions AS transition»
-«IF (transition.preCondition.pluginName == "PropositionalLogicPlugin")»
-«IF transition.preCondition.id > 0»
-/*		
-* Transition: 
-* - Name: «transition.name»
-* - Formula: «FOREACH transition.preCondition.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
-*		«parameter.value»«ENDIF»«ENDFOREACH»
-*
-* Plans in State: «FOREACH s.plans AS plan»				
-* - Plan - (Name): «plan.name», (PlanID): «plan.id» «ENDFOREACH»
-*/
-public static void GetConstraint«transition.preCondition.id»(ConstraintDescriptor c, RunningPlan rp) {
-«PROTECT CSTART '/*' CEND '*/' ID "cc"+transition.id »
-	//WorldModel wm = WorldModel.Get();
-«ENDPROTECT»			
-}
-«ENDIF»
-«ENDIF»
-«ENDFOREACH»
-
 «ENDAROUND»
 «AROUND de::uni_kassel::vs::cn::planDesigner::codegeneration::templates::ConstraintsCPlusPlus::planCheckingMethods FOR AbstractPlan»
 
+
+
+	«FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
+	«IF (rc.pluginName == "PropositionalLogicPlugin")»
+/*
+* RuntimeCondition - (Name): «rc.name»
+* (Formula:) «FOREACH rc.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
+*		«parameter.value»«ENDIF»«ENDFOREACH»
+*/
+public static void GetConstraint«rc.id»(ProblemDescriptor c, RunningPlan rp) {
+«PROTECT CSTART '/*' CEND '*/' ID "cc"+rc.id »
+	//WorldModel wm = WorldModel.Get();	
+«ENDPROTECT»			    
+}				
+«ENDIF»
+	«ENDFOREACH»
+	«FOREACH this.conditions.typeSelect(PreCondition) AS pc»
+	«IF (pc.pluginName == "PropositionalLogicPlugin")»
+/*
+* PreCondition - (Name): «pc.name»
+* (Formula:) «FOREACH pc.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
+*		«parameter.value»«ENDIF»«ENDFOREACH»
+*/
+public static void GetConstraint«pc.id»(ProblemDescriptor c, RunningPlan rp) {
+«PROTECT CSTART '/*' CEND '*/' ID "cc"+pc.id »
+	//WorldModel wm = WorldModel.Get();	
+«ENDPROTECT»			    
+}
+	«ENDIF»			
+	«ENDFOREACH»
 
 	«FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
 	«IF (rc.pluginName == "DefaultPlugin")»
@@ -210,7 +240,7 @@ public static void GetConstraint«transition.preCondition.id»(ConstraintDescripto
 * forall agents in «q.scope.name» let v = «q.sorts» 
 «ENDFOREACH»
 */
-void Constraint«rc.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp) {
+void Constraint«rc.id»::getConstraint(shared_ptr<ProblemDescriptor> c, shared_ptr<RunningPlan> rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+rc.id »
 «ENDPROTECT»			    
 }				
@@ -229,7 +259,7 @@ void Constraint«rc.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared
 * forall agents in «q.scope.name» let v = «q.sorts» 
 «ENDFOREACH»
 */
-void Constraint«pc.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared_ptr<RunningPlan> rp) {
+void Constraint«pc.id»::getConstraint(shared_ptr<ProblemDescriptor> c, shared_ptr<RunningPlan> rp) {
 «PROTECT CSTART '/*' CEND '*/' ID "cc"+pc.id »
 	//Proteced
 «ENDPROTECT»	
@@ -238,77 +268,9 @@ void Constraint«pc.id»::getConstraint(shared_ptr<ConstraintDescriptor> c, shared
 	«ENDIF»			
 	«ENDFOREACH»
 
-
-	«FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
-	«IF (rc.pluginName == "PropositionalLogicPlugin")»
-/*
-* RuntimeCondition - (Name): «rc.name»
-* (Formula:) «FOREACH rc.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
-*		«parameter.value»«ENDIF»«ENDFOREACH»
-*/
-public static void GetConstraint«rc.id»(ConstraintDescriptor c, RunningPlan rp) {
-«PROTECT CSTART '/*' CEND '*/' ID "cc"+rc.id »
-	//WorldModel wm = WorldModel.Get();	
-«ENDPROTECT»			    
-}				
-«ENDIF»
-	«ENDFOREACH»
-	«FOREACH this.conditions.typeSelect(PreCondition) AS pc»
-	«IF (pc.pluginName == "PropositionalLogicPlugin")»
-/*
-* PreCondition - (Name): «pc.name»
-* (Formula:) «FOREACH pc.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
-*		«parameter.value»«ENDIF»«ENDFOREACH»
-*/
-public static void GetConstraint«pc.id»(ConstraintDescriptor c, RunningPlan rp) {
-«PROTECT CSTART '/*' CEND '*/' ID "cc"+pc.id »
-	//WorldModel wm = WorldModel.Get();	
-«ENDPROTECT»			    
-}
-	«ENDIF»			
-	«ENDFOREACH»
-
 «ENDAROUND»
 «AROUND de::uni_kassel::vs::cn::planDesigner::codegeneration::templates::GoalExpressionCPlusPlus::planCheckingMethods FOR AbstractPlan»
 
-
-
-«FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
-	«IF (rc.pluginName == "DefaultPlugin")»
-			  //Check of RuntimeCondition - (Name): «rc.name», (ConditionString): «rc.conditionString» 
-			  /*
-			  * Available Vars:«FOREACH rc.vars AS var»
-			  *	- «var.name» («var.id»)«ENDFOREACH»
-			  */
-			  public static AbstractFormula Run«rc.id»(RunningPlan rp){
-			  	return AntlrFormularBuilder.GetFormula("«rc.conditionString»", ConditionType.Term);
-			  }		
-	«ENDIF»		
-	«ENDFOREACH»
-	«FOREACH this.conditions.typeSelect(PreCondition) AS pc»
-	«IF (pc.pluginName == "DefaultPlugin")»
-			  //Check of PreCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» 
-			  /*
-			  * Available Vars:«FOREACH pc.vars AS var»
-			  *	- «var.name» («var.id»)«ENDFOREACH»
-			  */
-			  public AbstractFormula Pre«pc.id»(RunningPlan rp){
-			  	return AntlrFormularBuilder.GetFormula("«pc.conditionString»", ConditionType.Term);
-			  }			
-	«ENDIF»			
-	«ENDFOREACH»
-	«FOREACH this.conditions.typeSelect(PostCondition) AS pc»
-	«IF (pc.pluginName == "DefaultPlugin")»
-			  //Check of PostCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» 
-			  /*
-			  * Available Vars:«FOREACH pc.vars AS var»
-			  *	- «var.name» («var.id»)«ENDFOREACH»
-			  */
-			  public AbstractFormula Post«pc.id»(RunningPlan rp){
-			  	return AntlrFormularBuilder.GetFormula("«pc.conditionString»", ConditionType.Term);
-			  }	
-	«ENDIF»					
-	«ENDFOREACH»
 
 
 «FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
@@ -342,6 +304,44 @@ public static void GetConstraint«pc.id»(ConstraintDescriptor c, RunningPlan rp) 
 			  * (Formula:) «FOREACH pc.parameters AS parameter»«IF parameter.key == "parameter_resolved_formular"» 
 			  *		«parameter.value»«ENDIF»«ENDFOREACH»
 			  */ 
+			  public AbstractFormula Post«pc.id»(RunningPlan rp){
+			  	return AntlrFormularBuilder.GetFormula("«pc.conditionString»", ConditionType.Term);
+			  }	
+	«ENDIF»					
+	«ENDFOREACH»
+
+
+«FOREACH this.conditions.typeSelect(RuntimeCondition) AS rc»
+	«IF (rc.pluginName == "DefaultPlugin")»
+			  //Check of RuntimeCondition - (Name): «rc.name», (ConditionString): «rc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH rc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  public static AbstractFormula Run«rc.id»(RunningPlan rp){
+			  	return AntlrFormularBuilder.GetFormula("«rc.conditionString»", ConditionType.Term);
+			  }		
+	«ENDIF»		
+	«ENDFOREACH»
+	«FOREACH this.conditions.typeSelect(PreCondition) AS pc»
+	«IF (pc.pluginName == "DefaultPlugin")»
+			  //Check of PreCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH pc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
+			  public AbstractFormula Pre«pc.id»(RunningPlan rp){
+			  	return AntlrFormularBuilder.GetFormula("«pc.conditionString»", ConditionType.Term);
+			  }			
+	«ENDIF»			
+	«ENDFOREACH»
+	«FOREACH this.conditions.typeSelect(PostCondition) AS pc»
+	«IF (pc.pluginName == "DefaultPlugin")»
+			  //Check of PostCondition - (Name): «pc.name», (ConditionString): «pc.conditionString» 
+			  /*
+			  * Available Vars:«FOREACH pc.vars AS var»
+			  *	- «var.name» («var.id»)«ENDFOREACH»
+			  */
 			  public AbstractFormula Post«pc.id»(RunningPlan rp){
 			  	return AntlrFormularBuilder.GetFormula("«pc.conditionString»", ConditionType.Term);
 			  }	
